@@ -1,0 +1,14 @@
+<div>
+  <h1>Action Sheet Here</h1>
+<ion-button
+  id="open-action-sheet"
+  (click)="setOpen(true)"
+>Open</ion-button>
+<ion-action-sheet
+  [isOpen]="isActionSheetOpen"
+  (didDismiss)="logEvent($event)"
+  trigger="open-action-sheet"
+  header="Actions"
+  [buttons]="actionSheetButtons"
+></ion-action-sheet>
+</div>
